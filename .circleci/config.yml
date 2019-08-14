@@ -7,12 +7,15 @@ jobs:
       # clone and build?
       - checkout 
       - run:
-          name: The First Step
-          command: |
+          name: Gradle test
+          command: 
             gradle test
-            gradle jar
+      - run:
+          name: Gradle jar
+          command: 
+            gradle jar        
       - store_test_results:
           path: build/test-results
       - store_artifacts:
-          path: /code/artifact
+          path: build/libs
           destination: prefix
