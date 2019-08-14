@@ -29,4 +29,12 @@ public class GildedRoseTest {
         assertTrue("brie is higher quality than it should be able to",app.items[0].quality==50 );
         
     }
+    @Test
+        public void quality_not_negative() {
+        Item[] items = new Item[] { new Item("Carrot", 0, 0) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertTrue("The Quality of an item is never negative",app.items[0].quality==0 );
+        
+    }
 }
