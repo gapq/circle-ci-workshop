@@ -46,7 +46,7 @@ jobs:
           path: build/libs
           destination: prefix
       - persist_to_workspace:
-          root: . #the folder to start the workspace from.
+          root: build/libs #the folder to start the workspace from.
           paths: 
             - . #if you want all of test to be persisted in the workspace. Note: Do not use both path examples, since `1` is also in `.` path
 
