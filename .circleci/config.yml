@@ -21,11 +21,11 @@ jobs:
       #     path: build/libs
       #     destination: prefix
       - persist_to_workspace:
-        root: . #the folder to start the workspace from.
-        paths: 
-          - . #if you want all of test to be persisted in the workspace. Note: Do not use both path examples, since `1` is also in `.` path
+          root: . #the folder to start the workspace from.
+          paths: 
+              - . #if you want all of test to be persisted in the workspace. Note: Do not use both path examples, since `1` is also in `.` path
       - attach_workspace:
-        at: /tmp/workspace
+          at: /tmp/workspace
   package:
     docker:
       - image: circleci/openjdk:8-jdk
@@ -46,11 +46,11 @@ jobs:
       #     path: build/libs
       #     destination: prefix
       - persist_to_workspace:
-        root: . #the folder to start the workspace from.
-        paths: 
-          - . #if you want all of test to be persisted in the workspace. Note: Do not use both path examples, since `1` is also in `.` path
+          root: . #the folder to start the workspace from.
+          paths: 
+            - . #if you want all of test to be persisted in the workspace. Note: Do not use both path examples, since `1` is also in `.` path
       - attach_workspace:
-        at: /tmp/workspace
+          at: /tmp/workspace
 
 workflows:
   version: 2
