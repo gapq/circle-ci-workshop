@@ -31,7 +31,7 @@ jobs:
       - image: circleci/openjdk:8-jdk
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: .
       # clone and build?
       # - checkout 
       # - run:
