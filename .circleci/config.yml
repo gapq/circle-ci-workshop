@@ -40,11 +40,9 @@ jobs:
           name: Gradle jar
           command: 
             gradle jar        
-      - store_build_results:
-          path: build/build-results
-      # - store_artifacts:
-      #     path: build/libs
-      #     destination: prefix
+      - store_artifacts:
+          path: build/libs
+          destination: prefix
       - persist_to_workspace:
           root: . #the folder to start the workspace from.
           paths: 
